@@ -1,0 +1,4 @@
+add changes to staged changes
+add text to commit
+and commit
+git push -u origin main
