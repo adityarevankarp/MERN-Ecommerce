@@ -36,22 +36,11 @@ const ProductDisplay = (props) => {
             <div className="productdisplay-right-price-new">${product.new_price}</div>
         </div>
         <div className="productdisplay-right-description">
-        A lightweight, usually knitted, pullover shirt, close-fitting and with
-          a round neckline and short sleeves, worn as an undershirt or outer
-          garment.
+        Amidst the tranquil beauty of the countryside, where emerald fields stretch as far as the eye can see and the gentle whispers of the breeze dance through the trees, lies a hidden sanctuary of serenity. Here, nestled among rolling hills and meandering streams, time seems to stand still, as if nature herself has paused to savor the quietude of the moment. 
         </div>
-        <div className="productdisplay-right-size">
-            <h1>Select Size</h1>
-            <div className="productdisplay-right-sizes">
-                <div>S</div>
-                <div>M</div>
-                <div>L</div>
-                <div>XL</div>
-                <div>XXl</div>
-            </div>
-        </div>
+        
         <button onClick={()=>{addToCart(product.id)}}>ADD TO CART</button>
-        <p className='productdisplay-right-category'><span>Category :</span>Women , T-Shirt, Crop Top</p>
+        <p className='productdisplay-right-category'><span>Category :</span>Abstract, Oil Paintings</p>
         <p className='productdisplay-right-category'><span>Tags :</span>Modern, Latest</p>
       </div>
     </div>
