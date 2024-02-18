@@ -35,32 +35,30 @@ const Navbar = () => {
           </Link>
           {menu === "shop" ? <hr /> : <></>}
         </li>
-        <li onClick={() => setMenu("mens")}>
-          <Link style={{ textDecoration: "none" }} to="/mens">
+        <li onClick={() => setMenu("abstract")}>
+          <Link style={{ textDecoration: "none" }} to="/abstract">
             Abstract
           </Link>
-          {menu === "mens" ? <hr /> : <></>}
+          {menu === "abstract" ? <hr /> : <></>}
         </li>
-        <li onClick={() => setMenu("womens")}>
-          <Link style={{ textDecoration: "none" }} to="/womens">
+        <li onClick={() => setMenu("portraits")}>
+          <Link style={{ textDecoration: "none" }} to="/portraits">
             Portraits
           </Link>
-          {menu === "womens" ? <hr /> : <></>}
+          {menu === "portraits" ? <hr /> : <></>}
         </li>
-        <li onClick={() => setMenu("kids")}>
-          <Link style={{ textDecoration: "none" }} to="/kids">
+        <li onClick={() => setMenu("oil")}>
+          <Link style={{ textDecoration: "none" }} to="/oil">
             Oil Paintings
           </Link>
-          {menu === "kids" ? <hr /> : <></>}
+          {menu === "oil" ? <hr /> : <></>}
         </li>
       </ul>
       <div className="nav-login-cart">
-        <Link to="/login">
-          <button>Login</button>
-        </Link>
-        <Link to="/cart">
-          <img src={cart_icon} alt="" />
-        </Link>
+        {localStorage.getItem('auth-token')
+        ?<button onClick={()=>{localStorage.removeItem('auth-token');window.location.replace("/");}}>Logout</button>
+        :<Link to='/login' style={{ textDecoration: 'none' }}><button>Login</button></Link>}
+        <Link to="/cart"><img src={cart_icon} alt="cart"/></Link>
         <div className="nav-cart-count">{getTotalCartItems()}</div>
       </div>
     </div>
