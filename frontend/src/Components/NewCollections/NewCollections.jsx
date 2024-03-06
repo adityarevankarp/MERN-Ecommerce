@@ -5,7 +5,7 @@ import Item from '../Item/Item'
 const NewCollections = () => {
   const [newCollections,setNewCollections] = useState([]);
   useEffect(()=>{
-    fetch('http://localhost:4000/newCollections')
+    fetch('https://mern-ecommerce-1-8nos.onrender.com/newCollections')
     .then((response)=>response.json())
     .then((data)=>setNewCollections(data))
   },[])
